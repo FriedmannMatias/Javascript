@@ -12,14 +12,16 @@ function precioConDescuento (precioProducto){
 while (true){
     var precioProducto = prompt("ingresa el precio del producto que desea comprar"); //con var si anda, con let no
     if(!isNaN(precioProducto) && precioProducto != null && precioProducto != " "){
-    break;
+        break;
     }else {
         alert("no ingreso un numero");
-    continue;
+        continue;
     }
 }
 
-let promo = prompt("perfecto, su producto tiene un descuento del 20%, desea aplicarlo? escriba 'si' o 'no'")
+
+ while (true){
+    var promo = prompt("perfecto, su producto tiene un descuento del 20%, desea aplicarlo? escriba 'si' o 'no'")
     switch (promo.toLowerCase()){
         case "si":
             alert("Muy bien, el precio del producto con el descuento aplicado y sumado el iva es de: " + precioConDescuento(precioProducto));
@@ -28,5 +30,8 @@ let promo = prompt("perfecto, su producto tiene un descuento del 20%, desea apli
             alert("Muy bien, el precio del producto sumado el iva es de: " + precioConIva(precioProducto));
             break;
         default:
-            alert("no ingreso ni 'si', ni 'no'")
-        }
+            alert("no ingreso ni 'si', ni 'no'");
+            continue;
+    }
+    break;
+}
